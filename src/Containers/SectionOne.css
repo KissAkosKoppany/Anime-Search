@@ -1,0 +1,122 @@
+
+.section-one {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+}
+
+.first-container {
+	display: flex;
+	padding-bottom: 3rem;
+}
+
+.left-box {
+	flex: 40%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+.left-box h1 {
+	margin: 0;
+	font-size: 3.5rem;
+	text-shadow: 0 0 14px black;
+}
+
+.right-box {
+	flex: 60%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.right-box .side-crd {
+	width: 17%;
+	height: auto;
+	border-radius: 20px;
+	box-shadow: 0 3px 6px 0 #9c9c9c;
+	transition: all 1s;
+	aspect-ratio: 176 / 313;
+}
+
+.left {
+	background-image: url(../../public/img/shigatsumain.jpg);
+	background-size: cover;
+}
+
+.right {
+	background-image: url(../../public/img/onepiecemain.jpg);
+	background-size: cover;
+}
+
+.right-box .middle-crd {
+	background-image: url(../../public/img/shingekimain.png);
+	width: 26%;
+	height: auto;
+	margin: 0 -1rem;
+	border-radius: 20px;
+	z-index: 1;
+	box-shadow: 0 3px 6px 0 #9c9c9c;
+	transition: all 1s;
+	position: relative;
+	aspect-ratio: 269 / 409;
+	background-size: cover;
+}
+
+.middle-crd:hover {
+	transform: scale(1.1);
+	background-image: url(../../public/gif/eren.gif);
+}
+
+.left:hover {
+	transform: scale(1.1);
+	z-index: 2;
+	background-image: url(../../public/gif/kaori.gif);
+}
+
+.right:hover {
+	transform: scale(1.1);
+	z-index: 2;
+	background-image: url(../../public/gif/luffy2.gif);
+}
+
+.info-container {
+	display: flex;
+	justify-content: space-around;
+	padding: 3rem 3rem 1rem 3rem;
+}
+
+.info-box {
+	width: 30%;
+	padding: 0.3rem 1rem;
+	box-shadow: 0 0 4px 0 #9c9c9c;
+	background-color: rgba(0, 0, 0, 0.4);
+}
+
+.info-box h2 {
+	font-size: 1.3rem;
+}
+.info-box p {
+	font-size: 0.9rem;
+}
+
+@media screen and (max-width: 1400px) {
+	.left-box h1 {
+		font-size: 3rem;
+	}
+}
+
+@media screen and (max-width: 1000px) {
+	.info-box p {
+		font-size: 0.8rem;
+	}
+
+	.info-box h2 {
+		font-size: 1.15rem;
+	}
+}
+
