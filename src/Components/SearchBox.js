@@ -17,10 +17,11 @@ const SearchBox = ({ searchInput, handleChecked, applyFilters }) => {
     return (
         <div className="search-box-container">
             <input
-                onKeyPress={searchInput}
+                // onKeyPress={searchInput}
+                onKeyDown={searchInput}
                 type="search"
                 className="search-box"
-                placeholder="Seach..."
+                placeholder="Search..."
             />
             <button onClick={openFiltersTab} className="button">Filters <FaFilter /></button> 
             <Filters isActive={isActive} closeFiltersTab={closeFiltersTab} applyFilters={applyFilters} />

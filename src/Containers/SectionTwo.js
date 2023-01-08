@@ -24,7 +24,7 @@ const SectionTwo = () => {
     }, [filters, searchfield] )
 
     function searchInput(e) {
-        if(e.charCode === 13) setSearchfield(e.target.value)
+        if(e.key === "Enter") setSearchfield(e.target.value)
     }
 
     function applyFilters(type, status, order_by, sort) {

@@ -19,7 +19,7 @@ const SectionOne = () => {
             <div className="info-container">
                 <div className="info-box">
                     <h2>Description</h2>
-                    <p>Detailed descrition for each anime.</p>
+                    <p>Detailed description for each anime.</p>
                 </div>
                 <div className="info-box">
                     <h2>Statistics</h2>
@@ -27,7 +27,7 @@ const SectionOne = () => {
                 </div>
                 <div className="info-box">
                     <h2>Information</h2>
-                    <p>Informations about the series including number of the episodes, source, current status, studio and a lot more.</p>
+                    <p>Informations about the series including number of episodes, source, current status, studio and a lot more.</p>
                 </div>
             </div>
             {/* <a href="#section-two"><button className="section-change-button"><MdKeyboardArrowDown /></button></a> */}

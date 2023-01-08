@@ -47,14 +47,18 @@ const CardContainer = ({ animeList }) => {
     return (
         <div className="slide-items-container">
             <button id={sliderPosition <= 0 ? 'slide-button-hidden' : ''} onClick={slideLeft} className="slide-button slide-button-left"><MdKeyboardArrowLeft /></button>
-            <div id="slider" className="card-container snap-inline">
-            {
-                animeList.map(anime => { 
-                    if(anime.approved) return <Card key={anime.mal_id} anime={anime}/>
-                    return null
-            })}
+            <div id="slider" className={animeList.length ? `card-container snap-inline` : `no-results`}>
+                {
+                    animeList.map(anime => { 
+                        if(anime.approved) return <Card key={anime.mal_id} anime={anime}/>
+                        return null
+                    })
+                }
             </div>
-            <button id={sliderPosition === sliderWidth || sliderWidth <= containerWidth() ? 'slide-button-hidden' : ''} onClick={slideRight} className="slide-button slide-button-right"><MdKeyboardArrowRight /></button>
+            <div className={animeList.length ? 'no-results' : 'no-results-container'}>
+                <p className="no-results-text"><span>No result!</span><br></br>Try changing the filters</p>
+            </div>
+            <button id={sliderPosition === sliderWidth || sliderWidth <= containerWidth() ? 'slide-button-hidden' : ''} onClick={slideRight} className={animeList.length ? `slide-button slide-button-right` : `no-results`}><MdKeyboardArrowRight /></button>
         </div>
     )
 }
