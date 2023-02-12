@@ -1,7 +1,8 @@
 {
   "files": {
     "main.css": "/Anime-Search/static/css/main.0b658d8a.css",
-    "main.js": "/Anime-Search/static/js/main.f4753796.js",
+    "main.js": "/Anime-Search/static/js/main.98dc2bd8.js",
+    "static/js/945.5228c555.chunk.js": "/Anime-Search/static/js/945.5228c555.chunk.js",
     "static/js/787.ed7b32ae.chunk.js": "/Anime-Search/static/js/787.ed7b32ae.chunk.js",
     "static/media/eren.gif": "/Anime-Search/static/media/eren.c17cc7f318f2452c5214.gif",
     "static/media/shingekimain.png": "/Anime-Search/static/media/shingekimain.58572e210ef6b2b24e90.png",
@@ -12,11 +13,12 @@
     "static/media/shigatsumain.jpg": "/Anime-Search/static/media/shigatsumain.83b5407e36f978f52ba4.jpg",
     "index.html": "/Anime-Search/index.html",
     "main.0b658d8a.css.map": "/Anime-Search/static/css/main.0b658d8a.css.map",
-    "main.f4753796.js.map": "/Anime-Search/static/js/main.f4753796.js.map",
+    "main.98dc2bd8.js.map": "/Anime-Search/static/js/main.98dc2bd8.js.map",
+    "945.5228c555.chunk.js.map": "/Anime-Search/static/js/945.5228c555.chunk.js.map",
     "787.ed7b32ae.chunk.js.map": "/Anime-Search/static/js/787.ed7b32ae.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.0b658d8a.css",
-    "static/js/main.f4753796.js"
+    "static/js/main.98dc2bd8.js"
   ]
 }
