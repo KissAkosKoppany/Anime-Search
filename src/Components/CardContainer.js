@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from "react";
-import Card from "./Card";
+import React, { Suspense, useEffect, useState } from "react";
 import { MdKeyboardArrowLeft } from 'react-icons/md';
 import { MdKeyboardArrowRight } from 'react-icons/md';
+import Spinner from "./Spinner";
+const Card = React.lazy(() => import('./Card'))
 
 const CardContainer = ({ animeList }) => {
 
@@ -48,12 +49,14 @@ const CardContainer = ({ animeList }) => {
         <div className="slide-items-container">
             <button id={sliderPosition <= 0 ? 'slide-button-hidden' : ''} onClick={slideLeft} className="slide-button slide-button-left"><MdKeyboardArrowLeft /></button>
             <div id="slider" className={animeList.length ? `card-container snap-inline` : `no-results`}>
-                {
-                    animeList.map(anime => { 
-                        if(anime.approved) return <Card key={anime.mal_id} anime={anime}/>
-                        return null
-                    })
-                }
+                <Suspense fallback={<Spinner />}>
+                    {
+                        animeList.map(anime => { 
+                            if(anime.approved) return <Card key={anime.mal_id} anime={anime}/>
+                            return null
+                        })
+                    }
+                </Suspense>
             </div>
             <div className={animeList.length ? 'no-results' : 'no-results-container'}>
                 <p className="no-results-text"><span>No result!</span><br></br>Try changing the filters</p>
